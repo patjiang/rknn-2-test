@@ -9,6 +9,7 @@ def get_host():
     system = platform.system()
     machine = platform.machine()
     os_machine = system + '-' + machine
+    host = 'None'
     if os_machine == 'Linux-aarch64':
         try:
             with open(DEVICE_COMPATIBLE_NODE) as f:
