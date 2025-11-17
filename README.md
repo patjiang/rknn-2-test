@@ -16,3 +16,5 @@ ghtp:
 ```
 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
 ```
+
+echo "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" | docker login ghcr.io -u patjiang --password-stdin
