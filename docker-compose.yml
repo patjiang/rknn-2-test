@@ -1,0 +1,8 @@
+version: '0.0'
+services:
+  my-rknn-app:
+    image: ghcr.io/patjiang/rknn-test:latest
+    privileged: true
+    volumes:
+      - '/proc/device-tree/compatible:/proc/device-tree/compatible:ro'
+      - '/dev:/dev'
