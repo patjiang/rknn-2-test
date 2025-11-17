@@ -26,7 +26,6 @@ def get_host():
     return host
 
 INPUT_SIZE = 224
-RK3562_RKNN_MODEL = 
 
 
 def show_top5(result):
