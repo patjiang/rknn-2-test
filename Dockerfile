@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir rknn_toolkit_lite2-2.3.2-cp311-cp311-manylinux_2_
     opencv-python-headless
 
 COPY test.py .
-COPY resnet18_for_rk3562.rknn .
+COPY resnet18_for_rk3566_rk3568.rknn .
 COPY space_shuttle_224.jpg .
 
 CMD ["python3", "test.py"]
