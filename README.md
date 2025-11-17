@@ -7,7 +7,7 @@ docker build -t rknn_test .
 ```
 docker run -it --rm \
   --privileged \
-  -v /dev:/dev \
+  -v /dev/dri:/dev/dri \
   -v /proc/device-tree/compatible:/proc/device-tree/compatible:ro \
   rknn_test
 ```
