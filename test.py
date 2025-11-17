@@ -15,7 +15,7 @@ def get_host():
         try:
             with open(DEVICE_COMPATIBLE_NODE) as f:
                 device_compatible_str = f.read()
-                print(device_compatible_tr)
+                print(device_compatible_str)
                 if 'rk3568' in device_compatible_str:
                     host = 'RK3566_RK3568'
         except IOError:
