@@ -11,11 +11,13 @@ def get_host():
     os_machine = system + '-' + machine
     host = 'None'
     if os_machine == 'Linux-aarch64':
+        print(os_machine)
         try:
             with open(DEVICE_COMPATIBLE_NODE) as f:
                 device_compatible_str = f.read()
-                if 'rk3562' in device_compatible_str:
-                    host = 'RK3562'
+                print(device_compatible_tr)
+                if 'rk3568' in device_compatible_str:
+                    host = 'RK3566_RK3568'
         except IOError:
             print('Read device node {} failed.'.format(DEVICE_COMPATIBLE_NODE))
             exit(-1)
@@ -24,7 +26,7 @@ def get_host():
     return host
 
 INPUT_SIZE = 224
-RK3562_RKNN_MODEL = 'resnet18_for_rk3562.rknn'
+RK3562_RKNN_MODEL = 
 
 
 def show_top5(result):
@@ -44,8 +46,8 @@ def show_top5(result):
 
 if __name__ == '__main__':
     host_name = get_host()
-    if host_name == 'RK3562':
-        rknn_model = RK3562_RKNN_MODEL
+    if host_name == 'RK3566_RK3568':
+        rknn_model = 'resnet18_for_rk3566_rk3568.rknn'
     else:
         print("This demo cannot run on the current platform: {}".format(host_name))
         exit(-1)
