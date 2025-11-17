@@ -5,4 +5,5 @@ services:
     privileged: true
     volumes:
       - '/proc/device-tree/compatible:/proc/device-tree/compatible:ro'
-      - '/dev:/dev'
+    devices:
+      - '/dev/dri:/dev/dri'
