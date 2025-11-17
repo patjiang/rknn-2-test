@@ -11,3 +11,8 @@ docker run -it --rm \
   -v /proc/device-tree/compatible:/proc/device-tree/compatible:ro \
   rknn_test
 ```
+
+ghtp:
+```
+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
+```
