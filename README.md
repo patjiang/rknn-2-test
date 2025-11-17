@@ -1,15 +1,16 @@
-## build:
+## build/pull image:
 ```
-docker build -t rknn_test .
+balena login ghcr.io
+balena pull ghcr.io/patjiang/rknn-test:latest
 ```
 
 ## Run:
 ```
-docker run -it --rm \
+balena run -it --rm \
   --privileged \
   -v /dev/dri:/dev/dri \
   -v /proc/device-tree/compatible:/proc/device-tree/compatible:ro \
-  rknn_test
+  ghcr.io/patjiang/rknn-test:latest
 ```
 
 ghtp:
