@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import platform
-from synset_label import labels
 from rknnlite.api import RKNNLite
 
 DEVICE_COMPATIBLE_NODE = '/proc/device-tree/compatible'
@@ -35,7 +34,7 @@ def show_top5(result):
     for i, index in enumerate(output_sorted_indices):
         value = output[index]
         if value > 0:
-            topi = '[{:>3d}] score:{:.6f} class:"{}"\n'.format(index, value, labels[index])
+            topi = '[{:>3d}] score:{:.6f}\n'.format(index, value)
         else:
             topi = '-1: 0.0\n'
         top5_str += topi
